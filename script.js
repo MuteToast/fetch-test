@@ -21,8 +21,8 @@ fetch('https://mockapi.ntig.dev/students/2000')
         studentContainer.innerHTML = `
             <h2>Student Information</h2>
             <p><strong>Name:</strong> ${data.name}</p>
-            <p><strong>Age:</strong> ${data.email}</p>
-            <p><strong>Major:</strong> ${data.birthdate}</p>
+            <p><strong>Email:</strong> ${data.email}</p>
+            <p><strong>Birthdate:</strong> ${data.birthdate}</p>
         `;
     })
     .catch(error => console.error('Error fetching student data:', error));
@@ -32,7 +32,7 @@ fetch('https://mockapi.ntig.dev/courses/3000')
     .then(data => {
         courseContainer.innerHTML = `
             <h2>Course Information</h2>
-            <p><strong>Title:</strong> ${data.name}</p>
+            <p><strong>Name:</strong> ${data.name}</p>
         `;
     })
     .catch(error => console.error('Error fetching course data:', error));
