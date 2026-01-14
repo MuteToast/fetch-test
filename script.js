@@ -1,18 +1,9 @@
 // mockapi.ntig.dev/students/2000
 // mockapi.ntig.dev/courses/3000
 
-fetch('https://mockapi.ntig.dev/students/2000')
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error('Error fetching student data:', error));
-
-fetch('https://mockapi.ntig.dev/courses/3000')
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error('Error fetching student data:', error));
-
 const studentContainer = document.getElementById('student-info');
 const courseContainer = document.getElementById('course-info');
+
 fetch('https://mockapi.ntig.dev/students/2000')
     .then(response => response.json())
     .then(data => {
@@ -23,11 +14,10 @@ fetch('https://mockapi.ntig.dev/students/2000')
                 <p><strong>Name:</strong> ${student.name}</p>
                 <p><strong>Email:</strong> ${student.email}</p>
                 <p><strong>Birthdate:</strong> ${student.birthdate}</p>
-                <hr>
             `;
         });
     })
-    .catch(error => console.error('Error fetching student data:', error));
+    .catch(error => console.error(error));
 
 fetch('https://mockapi.ntig.dev/courses/3000')
     .then(response => response.json())
@@ -37,8 +27,7 @@ fetch('https://mockapi.ntig.dev/courses/3000')
         data.forEach(course => {
             courseContainer.innerHTML += `
                 <p><strong>Name:</strong> ${course.name}</p>
-                <hr>
             `;
         });
     })
-    .catch(error => console.error('Error fetching course data:', error));
+    .catch(error => console.error(error));
