@@ -1,7 +1,7 @@
-// mockapi.ntig.dev/students/200
+// mockapi.ntig.dev/students/2000
 // mockapi.ntig.dev/courses/3000
 
-fetch('https://mockapi.ntig.dev/students/200')
+fetch('https://mockapi.ntig.dev/students/2000')
     .then(response => response.json())
     .then(studentData => {
         console.log('Student Data:', studentData);
